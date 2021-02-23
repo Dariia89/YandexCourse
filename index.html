@@ -162,9 +162,24 @@ this.timings['look-ma-finish'] = Date.now();</pre>
                 каждого объекта есть три свойства.&nbsp;<dfn>k</dfn>&nbsp;&mdash; названия ключа в&nbsp;localStorage для этого
                 ресурса.&nbsp;<dfn>p</dfn>&nbsp;&mdash; патч для ресурса, который сгенерировал vcdiff.&nbsp;<dfn>s</dfn>&nbsp;&mdash; чексумма для
                 ресурса актуальной версии, чтобы потом можно было проверить правильность
-                наложения патча на&nbsp;клиенте. Чексумма вычисляется по&nbsp;алгоритму Флетчера.
+                наложения патча на&nbsp;клиенте. Чексумма вычисляется по&nbsp;<dfn>алгоритму Флетчера</dfn>.
             </p> 
             
+            <div>
+                <span>дано <i>&epsilon;, &#120;</i><sub>0</sub></span><br>
+                <span>инициализировать <i>&#72;</i><sub>0</sub></span><br>
+                <span><i>&#107; &#61; </i>0</span><br>
+                <span><b>while</b> &#8741;&#8711;<i>&#402;<sub>&#107;</sub></i>&#8741; &#62; &epsilon;</span>
+                <div style="margin-left: 12px;">
+                    <span>найти направление <i>&#112;<sub>&#107;</sub></i> &#61; &#8722;<i>&#67;<sub>&#107;</sub></i>&#8711;<i>&#402;<sub>&#107;</sub></i></span><br>
+                    <span>вычислить <i>&#120;</i><sub><i>&#107;</i>&#43;1</sub> &#61; <i>&#120;<sub>&#107;</sub> &#43; &alpha;<sub>&#107;</sub> &#112;<sub>&#107;</sub> , &alpha;<sub>&#107;</sub></i> удовлетворяет условиям Вольфе</span><br>
+                    <span>обозначить <i>&#115;<sub>&#107;</sub></i> &#61; <i>&#120;</i><sub><i>&#107;</i>&#43;1</sub> &#8722; <i>&#120;<sub>&#107;</sub></i> и <i>&#121;<sub>&#107;</sub></i> &#61; &#8711;<i>&#402;</i><sub><i>&#107;</i>&#43;1</sub> &#8722; &#8711;<i>&#402;<sub>&#107;</sub></i></span><br>
+                    <span>вычислить <i>&#67;</i><sub><i>&#107;</i>&#43;1</sub></span><br>
+                    <span><i>&#107; = &#107; &#43; </i>1</span>
+                </div>
+                <span><b>end</b></span><br>
+            </div>
+
            <aside style="background: #f0f0f0; padding: 10px; width: 200px; float: right;">
             <dfn>Алгоритм Бройдена&nbsp;&mdash; Флетчера&nbsp;&mdash; Гольдфарба&nbsp;&mdash; Шанно (<abbr title="Broyden — Fletcher — Goldfarb — Shanno algorithm">BFGS</abbr>)</dfn> 
             &mdash;&nbsp;итерационный метод численной оптимизации, предназначенный для
